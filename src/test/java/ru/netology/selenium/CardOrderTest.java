@@ -76,7 +76,7 @@ public class CardOrderTest {
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+71111111111");
         driver.findElement(By.tagName("button")).click();
 
-        String text = driver.findElement(By.cssSelector("[data-test-id='agreement'] .checkbox__text")).getText();
+        String text = driver.findElement(By.cssSelector("[data-test-id='agreement'].input_invalid .checkbox__text")).getText();
 
         Assertions.assertEquals("Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй", text.trim());
     }
